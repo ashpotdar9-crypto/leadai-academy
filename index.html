@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LeadAI Academy</title>
+<meta name="description" content="Free, open-access learning app on strategic leadership, AI, digital transformation, product management, responsible AI and data governance. Bite-sized lessons, quizzes, flashcards and progress tracking.">
+<meta name="theme-color" content="#3b4ee0">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+<link rel="stylesheet" href="css/app.css">
+<script>
+  // Apply the saved theme before first paint to avoid a flash.
+  try { var s = JSON.parse(localStorage.getItem('leadai.v1') || '{}'); if (s.theme && s.theme !== 'system') document.documentElement.setAttribute('data-theme', s.theme); } catch (e) {}
+</script>
+</head>
+<body>
+<a href="#main" class="skip">Skip to content</a>
+<div class="shell">
+  <aside class="side" aria-label="Main navigation">
+    <a class="brand" href="#/"><span class="brand-mark" data-icon="logo"></span>LeadAI Academy</a>
+    <nav class="nav" id="nav"></nav>
+    <div class="side-foot">Free and open to everyone. Your progress is saved on this device only.</div>
+  </aside>
+  <div class="main">
+    <header class="topbar">
+      <a class="brand-mini" href="#/" aria-label="Home" data-icon="logo"></a>
+      <form class="search" id="searchForm" role="search">
+        <span data-icon="search"></span>
+        <label for="q" class="sr-only">Search lessons</label>
+        <input id="q" type="search" placeholder="Search lessons, concepts, flashcards..." autocomplete="off">
+      </form>
+      <div class="stats" id="stats"></div>
+    </header>
+    <main id="main" class="view" tabindex="-1"></main>
+  </div>
+</div>
+<nav class="tabbar" id="tabbar" aria-label="Main navigation"></nav>
+<div class="toasts" id="toasts" aria-live="polite"></div>
+<noscript><p style="padding:24px">This learning app needs JavaScript enabled.</p></noscript>
+<script src="data/course.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
